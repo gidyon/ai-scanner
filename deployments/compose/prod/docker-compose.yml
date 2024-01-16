@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  ai-scanner:
+    image: gidyon/ai-scanner:latest
+    restart: always
+    command:
+      [
+        "--config-file",
+        "/app/app.env",
+        "--key-file",
+        "/app/key.pem",
+        "--cert-file",
+        "/app/cert.pem",
+      ]
+    ports:
+      - "30085:30085"
+    volumes:
+      - ./configs/app.env:/app/app.env:ro
+      - /etc/letsencrypt/live/app.zuriscore.com/fullchain.pem:/app/cert.pem:ro
+      - /etc/letsencrypt/live/app.zuriscore.com/privkey.pem:/app/key.pem:ro
