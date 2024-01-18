@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/gidyon/ai-scanner/internal/imgcompress"
+	"github.com/gidyon/ai-scanner/internal/img"
 	"github.com/gidyon/gomicro/utils/errs"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -68,7 +68,8 @@ func main() {
 	})
 
 	// Compressing images
-	v1.Post("/images:compress", imgcompress.CompressImage)
+	v1.Post("/images/compress", img.CompressImage)
+	v1.Post("/images/convert", img.ConvertImage)
 
 	v1.Get("/healthcheck", func(c *fiber.Ctx) error {
 		return c.SendString("Am alive 👋!")
