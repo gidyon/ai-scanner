@@ -3,9 +3,12 @@ module github.com/gidyon/ai-scanner
 go 1.20
 
 require (
+	github.com/MaestroError/go-libheif v0.0.0-20230605164253-e36e44eed645
+	github.com/aws/aws-sdk-go v1.50.5
 	github.com/disintegration/imaging v1.6.2
 	github.com/gidyon/gomicro v0.1.4
 	github.com/gofiber/fiber/v2 v2.52.0
+	github.com/otiai10/gosseract/v2 v2.4.1
 	github.com/spf13/viper v1.18.2
 )
 
@@ -15,6 +18,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/uuid v1.5.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.17.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
@@ -29,6 +33,7 @@ require (
 	github.com/spf13/afero v1.11.0 // indirect
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/strukturag/libheif v1.16.2 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.51.0 // indirect
